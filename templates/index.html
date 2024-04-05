@@ -65,6 +65,8 @@
   <img src="/static/ANEA2.png" alt="Logo" width="30%" height="40%" class="rounded mx-auto d-block">
   <hr>
   <br><br><br>
+  <button onclick="leerContenido()">Leer contenido</button>
+  <br>
   <div class="info">
     <div class="info_dentro">
       <h2>Introduccion</h2>
@@ -129,6 +131,15 @@
     </div>  
 <hr>
 
+
+  <script>
+    function leerContenido() {
+      var contenido = document.body.innerText;
+      var synth = window.speechSynthesis;
+      var utterance = new SpeechSynthesisUtterance(contenido);
+      synth.speak(utterance);
+    }
+  </script>
 </body>
 
 </html>
